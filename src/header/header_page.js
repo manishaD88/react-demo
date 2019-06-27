@@ -21,7 +21,7 @@ class HeaderPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='navStyle'>
         <Nav tabs>
           <NavItem>
             <NavLink href="#" active>Link</NavLink>

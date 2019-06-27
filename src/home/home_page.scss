@@ -5,5 +5,53 @@
 }
 
 .top-margin-10 {
-	margin-top: 10px;
+  margin-top: 10px;
+}
+
+.resultCount {
+  width: 100%;
+  border: 2px solid #ffaf4b;
+  color: #FFAF18 !important;
+  border-radius: 10px;
+  font-weight: bolder;
+  .navbar-light .navbar-brand {
+    color: #FFAF18 !important;
+  }
+}
+
+.dropdownStyle {
+  button {
+    color: black;
+    background: whitesmoke;
+    margin-top: 6px;
+  }
+}
+
+.sort-by {
+  margin-right: 10px !important;
+  margin-top: 10px !important;
+}
+
+.salary-found {
+  margin-top: 10px;
+}
+
+.rangeBar {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 3px;
+  .jumbotron {
+    width: 100%;
+    margin-bottom: 0px;
+    -webkit-box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+    -moz-box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+    box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+  }
+}
+
+.price {
+  color: #FFAF18;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: xx-large;
 }

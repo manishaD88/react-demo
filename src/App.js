@@ -8,7 +8,7 @@ export default class App extends React.Component {
     return (
       <div>
         <HeaderPage/>
-        <Card className='mainCont'>
+        <Card className='mainCont container'>
           <HomePage/>
         </Card>
       </div>
