@@ -1,17 +1,10 @@
 import React from 'react';
-import './App.scss';
-import {HeaderPage} from './header/header_page.js';
-import {HomePage} from './home/home_page';
-import { Card } from 'reactstrap';
+import Home from './components/home';
+
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <HeaderPage/>
-        <Card className='mainCont'>
-          <HomePage/>
-        </Card>
-      </div>
+      <Home />
     );
   }
 }

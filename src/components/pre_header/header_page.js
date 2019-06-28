@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './header_page.scss';
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 
