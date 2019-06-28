@@ -49,9 +49,50 @@
   }
 }
 
+.range-clor {
+  .input-range__track {
+  
+    background: #FFAF18;
+  }
+}
+
 .price {
   color: #FFAF18;
   margin-left: 15px;
   font-weight: bold;
   font-size: xx-large;
+}
+
+.paginate {
+  margin-top: 20px !important;
+  margin-bottom: 20px;
+  margin-left: 30%;
+}
+
+.middlecontainer {
+  margin-left: 9%;
+}
+
+.font-color {
+  color: #FFAF18;
+}
+
+.sideCard {
+  -webkit-box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+  -moz-box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+  box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+  padding-top: 31px;
+  padding-left: 48px;
+}
+
+.sideCardB {
+  padding-top: 60px;
+  -webkit-box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+  -moz-box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+  box-shadow: 1px 2px 7px 1px rgba(0,0,0,0.44);
+  margin-top: 20px;
+}
+
+.grad1 {
+  background-color: #FFAF18;
 }

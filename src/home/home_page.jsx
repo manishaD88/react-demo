@@ -1,5 +1,10 @@
 import React from 'react';
 import './home_page.scss';
+import image from '../Microsoft-Logo.png'
+import InputRange from 'react-input-range';
+import  'react-input-range/lib/css/index.css'
+import Footer from '../footer';
+
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle, 
          CardBody, Row, Col, Pagination, PaginationItem, PaginationLink, 
          Dropdown, DropdownToggle, DropdownMenu, DropdownItem, 
@@ -15,6 +20,13 @@ import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle,
         UncontrolledDropdown} from 'reactstrap';
 
 export class HomePage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: { min: 2, max: 10 },
+    };
+  }
   render() {
     return (
       <div>
@@ -44,75 +56,87 @@ export class HomePage extends React.Component {
         <Row className='top-margin-10 rangeBar'>
           <Jumbotron fluid>
             <Container fluid>
+              <Row>
+              <Col xs='5'>
               <h1 className="display-5">Graphic Designer</h1>
               <p className="lead">Average Base Pay  <span className='price'>425,927/yr</span></p>
+              </Col>
+              <Col xs='7' className='range-color'>
+              <InputRange
+              maxValue={20}
+              minValue={0}
+              value={this.state.value}
+              onChange={value => this.setState({ value })} />
+              </Col>
+              </Row>
             </Container>
           </Jumbotron>
         </Row>
         <CardGroup>
-          <Row className='top-margin-10'>
-            <Col xs="3">
-              <Card>
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-                </CardBody>
-              </Card>
+          <Row className='top-margin-10 middlecontainer'>
+            <Col xs="3" className='sideCard'>
+              <Row>
+                <Col>
+                  <div>
+                    <h4 className='font-color'>Distance</h4>
+                    <select>
+                      <option value="with in 25 kms">With in 25 kms</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                    <div>
+                      <h5>Job Type</h5>
+                      <p>Full Time<span>(526)</span></p>
+                      <p>Internship<span>(115)</span></p>
+                      <p>Part Time<span>(35)</span></p>
+                      <p>Fresher<span>(25)</span></p>
+                      <p>Contract<span>(19)</span></p>
+                      <p> more >> </p>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
             </Col>
             <Col xs="9">
               <Card>
                 <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
+                  <GraphicsList/>
+                  <GraphicsList/>
+                  <GraphicsList/>
+                  <GraphicsList/>
+                  <GraphicsList/>
                 </CardBody>
               </Card>
             </Col>
           </Row>
-          <Row className='top-margin-10'>
-            <PaginationContainer/>
-          </Row>
         </CardGroup>
+        <div className='paginate'>
+          <Footer/>
+        </div>
       </div>
     );
    }
 }
 
-
-
-class PaginationContainer extends React.Component {
+class GraphicsList extends React.Component {
   render() {
     return (
-      <Pagination size="sm" aria-label="Page navigation example">
-      <PaginationItem>
-          <PaginationLink first href="#" />
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink previous href="#" />
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">
-            1
-          </PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">
-            2
-          </PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">
-            3
-          </PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink next href="#" />
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink last href="#" />
-        </PaginationItem>
-      </Pagination>
-    );
+      <Row className='sideCardB'>
+        <Col><img src={image} height="60" alt=""/></Col>
+        <Col>
+          <p>Graphics Designerr</p>
+          <p className='font-color'>Microsoft Corporator</p>
+        </Col>
+        <Col>
+          <p className='font-color'><span>Icon</span>$12,00,0000 - $15,00,000</p>
+          <p><span>Icon</span>Mumbai, Maharashtra India</p>
+        </Col>
+        <Col>
+        <Button color="primary" className='grad1'>View</Button>
+        <p>11 Position </p>
+        </Col>
+      </Row> 
+    )
   }
 }
